@@ -16,3 +16,18 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#inmu-button-header {
+    width: 100%;
+    background: skyblue;
+    height: 13vh;
+    text-align: center;
+}
+
+#inmu-button-header > h1 {
+    background: #42e695;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

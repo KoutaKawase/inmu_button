@@ -37,9 +37,9 @@ class Counter extends React.Component {
 class Description extends React.Component {
     render() {
         return (
-            <div>
+            <header id="inmu-button-header">
                 <h1>やりますねえ！を押せる画期的なWEBアプリですねえ！😃</h1>
-            </div>
+            </header>
         );
     }
 }
