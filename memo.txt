@@ -1,0 +1,17 @@
+今回の目標
+
+Reactで完成させる（やりきる）
+ブランチを利用して開発する
+コミットを細かくしていく
+あきらめない（大事）
+
+コンポーネント
+
+body
+  -InmuButtonBox
+    -Description
+    -Counter
+    -OperationBox
+      -InmuButton
+      -SnsShareBox
+        -TwitterShareButton
