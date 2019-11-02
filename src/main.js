@@ -1,12 +1,36 @@
-class OperationBox extends React.Component {
+class TwitterButton extends React.Component {
     render() {
         return <button>{this.props.count}</button>
     }
 }
 
+class SnsShareBox extends React.Component {
+    render() {
+        return (
+            <div>
+                <TwitterButton count={this.props.count} />
+            </div>
+        );
+    }
+}
+
+class OperationBox extends React.Component {
+    render() {
+        return (
+            <div>
+                <SnsShareBox count={this.props.count} />
+            </div>
+        );
+    }
+}
+
 class Counter extends React.Component {
     render() {
-        return <p>{this.props.count}回</p>
+        return (
+            <div id="count">
+                <span>{this.props.count}</span>
+            </div>
+        )
     }
 }
 
