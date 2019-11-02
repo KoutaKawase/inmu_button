@@ -1,21 +1,31 @@
-function OperationBox(props) {
-
+class OperationBox extends React.Component {
+    render() {
+        return <button>{this.props.count}</button>
+    }
 }
 
-function Counter(props) {
-
+class Counter extends React.Component {
+    render() {
+        return <p>{this.props.count}回</p>
+    }
 }
 
-function Description(props) {
-
+class Description extends React.Component {
+    render() {
+        return <p>説明ヘッダー</p>
+    }
 }
 
-function InmuButtonBox(props) {
-    return (
-        <Description />
-        <Counter />
-        <OperationBox />
-    );
+class InmuButtonBox extends React.Component {
+    render() {
+        return (
+            <div>
+                <Description />
+                <Counter count={this.props.count} />
+                <OperationBox count={this.props.count} />
+            </div>
+        )
+    }
 }
 
 //カウントモック
