@@ -1,3 +1,10 @@
+const BUTTON_SOUND_FILE = "../assets/pushSound.mp3";
+
+const playPushShound = () => {
+    const audio = new Audio(BUTTON_SOUND_FILE);
+    audio.play();
+};
+
 class TwitterButton extends React.Component {
     render() {
         return (
@@ -28,17 +35,17 @@ class SnsShareBox extends React.Component {
 class InmuButton extends React.Component {
     constructor(props) {
         super(props);
-        //this.handlePushCountButton = this.handlePushCountButton.bind(this);
     }
 
     handleChangeCount = (event) => {
+        playPushShound();
         this.props.onClick();
     };
 
     render() {
         return (
-            <div id="inmu-button" onClick={this.handleChangeCount}>
-                <button>やりますねえ！</button>
+            <div id="inmu-button" >
+                <button onClick={this.handleChangeCount}>やりますねえ！</button>
             </div>
         );
     }
@@ -69,7 +76,7 @@ class Description extends React.Component {
     render() {
         return (
             <header id="inmu-button-header">
-                <h1>やりますねえ！を押せる画期的なWEBアプリですねえ！😃</h1>
+                <h1>やりますねえ！を押せる画期的なアプリ。</h1>
             </header>
         );
     }
@@ -79,7 +86,6 @@ class InmuButtonBox extends React.Component {
     constructor(props) {
         super(props);
         const count = localStorage.getItem('count');
-        console.log(typeof count);
         this.state = {
             count: count
         };
