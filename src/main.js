@@ -47,7 +47,7 @@ class Description extends React.Component {
 class InmuButtonBox extends React.Component {
     render() {
         return (
-            <div>
+            <div id="inmu-button-box">
                 <Description />
                 <Counter count={this.props.count} />
                 <OperationBox count={this.props.count} />
