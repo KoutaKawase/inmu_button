@@ -26,9 +26,18 @@ class SnsShareBox extends React.Component {
 }
 
 class InmuButton extends React.Component {
+    constructor(props) {
+        super(props);
+        //this.handlePushCountButton = this.handlePushCountButton.bind(this);
+    }
+
+    handleChangeCount = (event) => {
+        this.props.onClick();
+    };
+
     render() {
         return (
-            <div id="inmu-button">
+            <div id="inmu-button" onClick={this.handleChangeCount}>
                 <button>やりますねえ！</button>
             </div>
         );
@@ -39,7 +48,7 @@ class OperationBox extends React.Component {
     render() {
         return (
             <div>
-                <InmuButton />
+                <InmuButton onClick={this.props.onClick} />
                 <SnsShareBox count={this.props.count} />
             </div>
         );
@@ -67,21 +76,40 @@ class Description extends React.Component {
 }
 
 class InmuButtonBox extends React.Component {
+    constructor(props) {
+        super(props);
+        const count = localStorage.getItem('count');
+        console.log(typeof count);
+        this.state = {
+            count: count
+        };
+    }
+
+    handleChangeCount = () => {
+        let count = localStorage.getItem('count');
+        count = parseInt(count) + 1;
+        localStorage.setItem('count', count);
+        this.setState({
+            count: localStorage.getItem('count')
+        });
+    }
+
     render() {
         return (
             <div id="inmu-button-box">
                 <Description />
-                <Counter count={this.props.count} />
-                <OperationBox count={this.props.count} />
+                <Counter count={this.state.count} />
+                <OperationBox count={this.state.count} onClick={this.handleChangeCount} />
             </div>
-        )
+        );
     }
 }
 
-//カウントモック
-const count = 30000;
+if (localStorage.getItem('count') === null) {
+    localStorage.setItem('count', 0);
+}
 
 ReactDOM.render(
-    <InmuButtonBox count={count} />,
+    <InmuButtonBox />,
     document.getElementById('root')
 );
