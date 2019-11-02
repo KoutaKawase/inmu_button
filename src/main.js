@@ -12,7 +12,11 @@ class Counter extends React.Component {
 
 class Description extends React.Component {
     render() {
-        return <p>説明ヘッダー</p>
+        return (
+            <div>
+                <h1>やりますねえ！を押せる画期的なWEBアプリですねえ！😃</h1>
+            </div>
+        );
     }
 }
 
