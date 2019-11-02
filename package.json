@@ -1,0 +1,12 @@
+{
+  "name": "inmu_button",
+  "version": "1.0.0",
+  "description": "やりますねえ！の回数ボタン",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "out": "tsc \"src/main.ts\""
+  },
+  "author": "suhrkawase",
+  "license": "ISC"
+}
