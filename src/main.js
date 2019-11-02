@@ -7,9 +7,10 @@ class TwitterButton extends React.Component {
                 data-show-count="false"
                 data-lang="ja"
                 data-size="large"
+                data-text={"現在のやりますねえは" + this.props.count + "回"}
             >
                 Twitter
-            </a>
+            </a >
         );
     }
 }
