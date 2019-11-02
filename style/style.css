@@ -16,26 +16,25 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 25px;
 }
 
 #inmu-button-header {
     width: 100%;
-    background: skyblue;
     height: 13vh;
     text-align: center;
 }
 
 #inmu-button-header > h1 {
-    background: #42e695;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 13px;
 }
 
 #count {
     font-family: "Nico Moji";
-    background: rgb(220, 47, 255);
     text-align: center;
     height: 14vh;
 }
@@ -43,4 +42,39 @@ body {
 #count > span {
     font-size: 50px;
     text-decoration: underline;
+    color: rgb(40, 123, 158)
+}
+
+#inmu-button {
+    height: 18vh;
+}
+
+#inmu-button > button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    border: 2px solid #1a2208;
+    font-size: 16px;
+    color: #050700;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: .4s;
+    background: #fff;
+}
+
+#inmu-button > button:hover {
+    background-color: #bcbec5;
+    border-color: #00572b8c;
+    color: #FFF;
+}
+
+#twitter-button {
+    text-align: center;
+    margin-top: 30px;
 }

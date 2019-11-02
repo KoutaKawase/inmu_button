@@ -1,14 +1,34 @@
 class TwitterButton extends React.Component {
     render() {
-        return <button>{this.props.count}</button>
+        return (
+            <a
+                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                className="twitter-share-button"
+                data-show-count="false"
+                data-lang="ja"
+                data-size="large"
+            >
+                Twitter
+            </a>
+        );
     }
 }
 
 class SnsShareBox extends React.Component {
     render() {
         return (
-            <div>
+            <div id="twitter-button">
                 <TwitterButton count={this.props.count} />
+            </div>
+        );
+    }
+}
+
+class InmuButton extends React.Component {
+    render() {
+        return (
+            <div id="inmu-button">
+                <button>やりますねえ！</button>
             </div>
         );
     }
@@ -18,6 +38,7 @@ class OperationBox extends React.Component {
     render() {
         return (
             <div>
+                <InmuButton />
                 <SnsShareBox count={this.props.count} />
             </div>
         );
