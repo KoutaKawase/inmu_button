@@ -6,6 +6,7 @@ body {
 }
 
 .wf-hannari { font-family: "Hannari"; }
+.wf-nicomoji { font-family: "Nico Moji"; }
 
 #inmu-button-box {
     width: 60%;
@@ -30,4 +31,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#count {
+    font-family: "Nico Moji";
+    background: rgb(220, 47, 255);
+    text-align: center;
+    height: 14vh;
+}
+
+#count > span {
+    font-size: 50px;
+    text-decoration: underline;
 }

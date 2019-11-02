@@ -57,7 +57,7 @@ class InmuButtonBox extends React.Component {
 }
 
 //カウントモック
-const count = 30;
+const count = 30000;
 
 ReactDOM.render(
     <InmuButtonBox count={count} />,

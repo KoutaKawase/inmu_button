@@ -10,7 +10,7 @@ Reactで完成させる（やりきる）
 body
   -InmuButtonBox
     -Description
-    -Counter
+    -Counter　ここだけニコモじフォントにする
     -OperationBox
       -InmuButton
       -SnsShareBox
