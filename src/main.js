@@ -1,10 +1,27 @@
-function Greeting(props) {
+function OperationBox(props) {
+
+}
+
+function Counter(props) {
+
+}
+
+function Description(props) {
+
+}
+
+function InmuButtonBox(props) {
     return (
-        <p>Hello from React!</p>
+        <Description />
+        <Counter />
+        <OperationBox />
     );
 }
 
+//カウントモック
+const count = 30;
+
 ReactDOM.render(
-    <Greeting />,
+    <InmuButtonBox count={count} />,
     document.getElementById('root')
 );
